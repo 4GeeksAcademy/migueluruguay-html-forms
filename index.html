@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form </title>
+</head>
+<body>
+    <h1>Payment form </h1>
+    <form id="paymentForm">
+        <div>
+            <label for="cardNumber">Card #</label>
+            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" maxlength="16" required>
+        </div>
+
+        <div>
+            <label for="cvc">CVC #</label>
+            <input type="text" id="cvc" name="cvc" pattern="\d{3,4}" maxlength="4" required>
+        </div>
+
+        <div>
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" min="0.01" step="0.01" required>
+        </div>
+
+        <div>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+
+        <div>
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+
+        <div>
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+
+        <div>
+            <label for="state">State</label>
+            <select id="state" name="state" required>
+                <option value="">Pick a state</option>
+                <option value="NY">New York</option>
+                <option value="CA">California</option>
+                <!-- Agrega más estados según sea necesario -->
+            </select>
+        </div>
+
+        <div>
+            <label for="postalCode">Postal Code</label>
+            <input type="text" id="postalCode" name="postalCode" pattern="\d{5}" maxlength="5" required>
+        </div>
+
+        <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+        </div>
+
+        <div>
+            <button type="button" onclick="submitForm()">Send</button>
+            <button type="reset">Cancel</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
